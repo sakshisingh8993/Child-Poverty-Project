@@ -1,0 +1,2464 @@
+TASK 1
+
+/* Create a New Database */
+Create Database Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+-----------------------------------------------------------------------------------------------------
+/* Create schema for Task 1*/
+Create Schema Chd
+
+go
+-----------------------------------------------------------------------------------------------------
+/* Create a New Table after adding schema*/
+CREATE TABLE [Chd].[ethiopia_constructed$](
+	[childid] [nvarchar](255) NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[inround] [float] NULL,
+	[panel] [float] NULL,
+	[deceased] [float] NULL,
+	[dint] [datetime] NULL,
+	[commid] [nvarchar](255) NULL,
+	[clustid] [float] NULL,
+	[region] [float] NULL,
+	[typesite] [float] NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[agemon] [float] NULL,
+	[marrcohab] [float] NULL,
+	[marrcohab_age] [float] NULL,
+	[birth] [float] NULL,
+	[birth_age] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[fwfl] [float] NULL,
+	[fhfa] [float] NULL,
+	[fwfa] [float] NULL,
+	[fbfa] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[bwght] [float] NULL,
+	[bwdoc] [float] NULL,
+	[numante] [float] NULL,
+	[delivery] [float] NULL,
+	[tetanus] [float] NULL,
+	[bcg] [float] NULL,
+	[measles] [float] NULL,
+	[dpt] [float] NULL,
+	[polio] [float] NULL,
+	[hib] [float] NULL,
+	[chmightdie] [float] NULL,
+	[chillness] [float] NULL,
+	[chinjury] [float] NULL,
+	[chhprob] [float] NULL,
+	[chdisability] [float] NULL,
+	[chdisscale] [float] NULL,
+	[chsmoke] [float] NULL,
+	[chalcohol] [float] NULL,
+	[chrephealth1] [float] NULL,
+	[chrephealth2] [float] NULL,
+	[chrephealth3] [float] NULL,
+	[chrephealth4] [float] NULL,
+	[chhrel] [float] NULL,
+	[chhealth] [float] NULL,
+	[cladder] [float] NULL,
+	[hsleep] [float] NULL,
+	[hcare] [float] NULL,
+	[hchore] [float] NULL,
+	[htask] [float] NULL,
+	[hwork] [float] NULL,
+	[hschool] [float] NULL,
+	[hstudy] [float] NULL,
+	[hplay] [float] NULL,
+	[commwork] [float] NULL,
+	[commsch] [float] NULL,
+	[preprim] [float] NULL,
+	[agegr1] [float] NULL,
+	[enrol] [float] NULL,
+	[engrade] [float] NULL,
+	[entype] [float] NULL,
+	[hghgrade] [float] NULL,
+	[timesch] [float] NULL,
+	[levlread] [float] NULL,
+	[levlwrit] [float] NULL,
+	[literate] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[careladder] [float] NULL,
+	[careldr4yrs] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[dadcantread] [float] NULL,
+	[dadyrdied] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[momcantread] [float] NULL,
+	[momyrdied] [float] NULL,
+	[headid] [float] NULL,
+	[headedu] [float] NULL,
+	[headage] [float] NULL,
+	[headsex] [float] NULL,
+	[headrel] [float] NULL,
+	[hhsize] [float] NULL,
+	[male05] [float] NULL,
+	[male612] [float] NULL,
+	[male1317] [float] NULL,
+	[male1860] [float] NULL,
+	[male61] [float] NULL,
+	[female05] [float] NULL,
+	[female612] [float] NULL,
+	[female1317] [float] NULL,
+	[female1860] [float] NULL,
+	[female61] [float] NULL,
+	[wi_new] [float] NULL,
+	[hq_new] [float] NULL,
+	[sv_new] [float] NULL,
+	[cd_new] [float] NULL,
+	[drwaterq_new] [float] NULL,
+	[toiletq_new] [float] NULL,
+	[elecq_new] [float] NULL,
+	[cookingq_new] [float] NULL,
+	[aniany] [float] NULL,
+	[animilk] [float] NULL,
+	[anidrau] [float] NULL,
+	[anirumi] [float] NULL,
+	[anispec] [float] NULL,
+	[anicowm] [float] NULL,
+	[anicowt] [float] NULL,
+	[anicalv] [float] NULL,
+	[anibufm] [float] NULL,
+	[anibuft] [float] NULL,
+	[aniheif] [float] NULL,
+	[anibull] [float] NULL,
+	[anihebu] [float] NULL,
+	[anidonk] [float] NULL,
+	[aniybul] [float] NULL,
+	[anioxen] [float] NULL,
+	[anicaml] [float] NULL,
+	[anishee] [float] NULL,
+	[anigoat] [float] NULL,
+	[anipigs] [float] NULL,
+	[anipoul] [float] NULL,
+	[anirabb] [float] NULL,
+	[anibeeh] [float] NULL,
+	[aniothr] [float] NULL,
+	[ownlandhse] [float] NULL,
+	[ownhouse] [float] NULL,
+	[psnp_pw] [float] NULL,
+	[psnp_ds] [float] NULL,
+	[othprog] [float] NULL,
+	[hep] [float] NULL,
+	[resettled] [float] NULL,
+	[eap] [float] NULL,
+	[foodsec] [float] NULL,
+	[credit] [float] NULL,
+	[shcrime1] [float] NULL,
+	[shcrime2] [float] NULL,
+	[shcrime3] [float] NULL,
+	[shcrime4] [float] NULL,
+	[shcrime5] [float] NULL,
+	[shcrime6] [float] NULL,
+	[shcrime7] [float] NULL,
+	[shcrime8] [float] NULL,
+	[shregul1] [float] NULL,
+	[shregul2] [float] NULL,
+	[shregul3] [float] NULL,
+	[shregul4] [float] NULL,
+	[shregul5] [float] NULL,
+	[shecon1] [float] NULL,
+	[shecon2] [float] NULL,
+	[shecon3] [float] NULL,
+	[shecon4] [float] NULL,
+	[shecon5] [float] NULL,
+	[shecon6] [float] NULL,
+	[shecon7] [float] NULL,
+	[shecon8] [float] NULL,
+	[shecon9] [float] NULL,
+	[shecon10] [float] NULL,
+	[shecon11] [float] NULL,
+	[shecon12] [float] NULL,
+	[shecon13] [float] NULL,
+	[shecon14] [float] NULL,
+	[shenv1] [float] NULL,
+	[shenv2] [float] NULL,
+	[shenv3] [float] NULL,
+	[shenv4] [float] NULL,
+	[shenv5] [float] NULL,
+	[shenv6] [float] NULL,
+	[shenv7] [float] NULL,
+	[shenv8] [float] NULL,
+	[shenv9] [float] NULL,
+	[shhouse1] [float] NULL,
+	[shhouse2] [float] NULL,
+	[shhouse3] [float] NULL,
+	[shfam1] [float] NULL,
+	[shfam2] [float] NULL,
+	[shfam3] [float] NULL,
+	[shfam4] [float] NULL,
+	[shfam5] [float] NULL,
+	[shfam6] [float] NULL,
+	[shfam7] [float] NULL,
+	[shfam8] [float] NULL,
+	[shfam9] [float] NULL,
+	[shfam10] [float] NULL,
+	[shfam11] [float] NULL,
+	[shfam12] [float] NULL,
+	[shfam13] [float] NULL,
+	[shfam14] [float] NULL,
+	[shfam18] [float] NULL,
+	[shother] [float] NULL,
+	[ID_PK] [nchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_PK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, 
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-----------------------------------------------------------------------------------------------------
+
+/* insert data into the table into schemas Chd*/
+Insert into chd.ethiopia_constructed$ Select * from dbo.ethiopia_constructed$
+
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+Drop table dbo.ethiopia_constructed$
+
+-----------------------------------------------------------------------------------------------------
+
+/* identify the data in the table*/
+Select * from Chd.ethiopia_constructed$
+
+-----------------------------------------------------------------------------------------------------
+
+/* Add new Column as Serial No.*/
+alter table chd.ethiopia_constructed$ add SrNo int identity(1,1)
+
+-----------------------------------------------------------------------------------------------------
+/* Add new Column as ID_PK*/
+Alter Table chd.ethiopia_constructed$ add ID_PK nchar(255)
+
+-----------------------------------------------------------------------------------------------------
+/* Using Concatination for Primary Key */
+update chd.ethiopia_constructed$ set ID_PK = Concat(childid,':',SrNo)
+-----------------------------------------------------------------------------------------------------
+/* Add constraint in column ID_PK */
+Alter table chd.ethiopia_constructed$ Alter column ID_PK nchar(255) not null;
+-----------------------------------------------------------------------------------------------------
+/* Add Primary key in column ID_PK */
+Alter table chd.ethiopia_constructed$ add primary key(ID_PK)
+
+-----------------------------------------------------------------------------------------------------
+
+/* Using Concatination for Primary Key with Replace function */
+Update chd.ethiopia_constructed$ Set ID_PK=REPLACE(ID_PK,'ET','YL')
+
+-----------------------------------------------------------------------------------------------------
+/* Report to analyse the child poverty on the basis of Regions, 
+Weight, Height and BMI in Ethiopia in different Years*/  
+Declare @StartDate Datetime ='2002-11-23 00:00:000',
+		@EndDate Datetime ='2017-11-23 00:00:000'
+Select 
+	childid as ID,
+	region as Regions, 
+	ROUND(chweight, 2) as Child_Weight,
+	ROUND(chheight, 2) as Child_Height,
+	ROUND(agemon/12, 2) as Age_In_Year, 
+	ROUND(bmi, 2) as BMI from Chd.ethiopia_constructed$
+where dint>=@StartDate and dint <=@EndDate 
+order by Regions
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Gender Ratio*/
+Create View DeceasedChild_1 
+As Select chsex as Gender, sum(deceased) as Deceased from chd.ethiopia_constructed$
+where deceased =1
+group by chsex
+
+/* Create View of above Query*/
+Select * from DeceasedChild_1
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Interview Round By Young Life Community Ratio*/
+Create View DeceasedChild_2 
+As Select round as Round,sum(deceased)as Deceased from chd.ethiopia_constructed$
+where deceased =1
+group by Round
+
+/* Create View of above Query*/
+Select * from DeceasedChild_2
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create And Alter Procedure for Repeatative Task */ 
+Create PROCEDURE SelectChildRec @Round nvarchar(30)
+AS
+Begin Try
+	SELECT childid as ID, yc as Young_Cohort, round As Round, 
+		inround as Inround, dint as Interview_Date, 
+		childid as ChildID, clustid as ClustID,region As Regions, 
+		childloc as Locations, chsex As Gender, chlang as Languages 
+	FROM chd.ethiopia_constructed$ WHERE round = @Round and dint is not null
+End Try
+Begin Catch
+	SELECT ERROR_MESSAGE() AS [Error Message]
+         ,ERROR_LINE() AS ErrorLine
+         ,ERROR_NUMBER() AS [Error Number]  
+         ,ERROR_SEVERITY() AS [Error Severity]  
+         ,ERROR_STATE() AS [Error State]
+		 ,ERROR_PROCEDURE() As [Error Procedure]
+End Catch
+Go
+-----------------------------------------------------------------------------------------------------
+/* Execute Procedure for Repeatative Task for Round */ 
+Exec SelectChildRec @Round = 1
+Exec SelectChildRec @Round = 2
+Exec SelectChildRec @Round = 3
+Exec SelectChildRec @Round = 4
+Exec SelectChildRec @Round = 5
+-----------------------------------------------------------------------------------------------------
+
+/* Work, Play and Study Parameter Report of Child in Ethiopia */
+Begin Try
+Select yc as Young_Cohort,hwork as Hours_Work, hschool as Hours_School,
+hstudy as Hours_Study,hplay as Hours_Play From chd.ethiopia_constructed$ 
+where yc<>0 and hwork<>0 
+Order BY 
+(Case
+	when hwork is null then 'No Record'
+	when hschool is null then 'No Record'
+	when hstudy is null then 'No Record'
+	when hplay is null then 'No Record'
+	else 'Children are not spending time on it'
+End)
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+------------------------------------------------------------------------------------------------------------
+
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create a New Table after adding schema*/
+
+CREATE TABLE [Chd].[Ethiopia_N](
+	[S_No] [float] NOT NULL,
+	[childid] [nvarchar](255) NOT NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[dint] [datetime] NULL,
+	[commid] [nvarchar](255) NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[birth] [float] NULL,
+	[birth_age] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[chdisability] [float] NULL,
+	[chsmoke] [float] NULL,
+	[chalcohol] [float] NULL,
+	[chrephealth1] [float] NULL,
+	[chrephealth2] [float] NULL,
+	[chrephealth3] [float] NULL,
+	[chrephealth4] [float] NULL,
+	[hsleep] [float] NULL,
+	[hcare] [float] NULL,
+	[hchore] [float] NULL,
+	[htask] [float] NULL,
+	[hwork] [float] NULL,
+	[hschool] [float] NULL,
+	[hstudy] [float] NULL,
+	[hplay] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[careladder] [float] NULL,
+	[careldr4yrs] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[dadcantread] [float] NULL,
+	[dadyrdied] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[momcantread] [float] NULL,
+	[momyrdied] [float] NULL,
+ CONSTRAINT [PK_Ethiopia_N] PRIMARY KEY CLUSTERED 
+(
+	[childid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, 
+ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+-----------------------------------------------------------------------------------------------------
+
+/* insert data into the table into schemas Chd*/
+Insert into chd.ethiopia_N Select * from dbo.ethiopia_N
+
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+Drop table dbo.ethiopia_N
+
+-----------------------------------------------------------------------------------------------------
+
+/* Measure less than Zero CHILD: ANTHROPOMETRIC */
+Begin Try
+Select childid as ID ,zwfa as Z_Score_Weight,zhfa as Z_Score_Height,
+zbfa as Z_Score_BMI,zwfl as Weight_length_Per_Height 
+from [Chd].[Ethiopia_N] where zwfa<0 and zhfa<0 and zbfa<0 and zwfl<0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Young Cohort Child Report Who are underweight, short in height and thinness */
+Begin Try
+Select childid as ID , yc as Young_Cohort, underweight as Underweight, 
+stunting As Short_Height_Age, thinness as Thinness from [Chd].[Ethiopia_N]
+where underweight is not null and underweight<>0 
+and stunting is not null and stunting<>0 
+and thinness is not null and thinness<>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Report Child who consume drugs */
+Begin Try
+Select 
+[Chd].[Ethiopia_N].childid as ID ,[Chd].[Ethiopia_N].chsmoke as Child_Smoke, 
+round(chd.Ethiopia_constructed$.agemon/12,1) as AGE,
+[Chd].[Ethiopia_N].chalcohol as Child_Alchohol 
+from [Chd].[Ethiopia_N] 
+right join [Chd].[Ethiopia_constructed$] 
+on 
+chd.Ethiopia_N.childid = Chd.Ethiopia_constructed$.childid 
+where [Chd].[Ethiopia_N].chsmoke is not null 
+and [Chd].[Ethiopia_N].chalcohol is not null and [Chd].[Ethiopia_N].chalcohol <>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+
+/* Health Parameter Report of Child in Ethiopia */
+Begin Try
+Select Ethnicity= (
+CASE
+		WHEN chethnic = 99 THEN 'NK'
+		WHEN chethnic = 11 THEN 'Agew'
+		WHEN chethnic = 12 THEN 'Amhara'
+		WHEN chethnic = 13 THEN 'Gurage'
+		WHEN chethnic = 14 THEN 'Hadiva'
+		WHEN chethnic = 15 THEN 'Kambata'
+		WHEN chethnic = 16 THEN 'Oromo'
+		WHEN chethnic = 17 THEN 'Sidama'
+		WHEN chethnic = 18 THEN 'Tigrian'
+		WHEN chethnic = 19 THEN 'Wolavta'
+		ELSE 'Other'
+	END)  ,chdisability, chrephealth1,chrephealth2,chrephealth3,chrephealth4 
+from [Chd].[Ethiopia_N]
+where chrephealth1 is not null and 
+chrephealth2 is not null and chrephealth3 is not null and 
+chrephealth4 is not null and chdisability = 1
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Report Child Location, Group , Language and religion */
+Begin Try
+Select Gender = (
+case 
+	when chsex = 1 then ('Male')
+	else ('Female')
+end
+),
+childloc as Child_Location, chlang as Child_Language, 
+chethnic as Child_Ethnic , chldrel as Child_Religion 
+from [Chd].[Ethiopia_N] 
+where chlang is not null and chethnic is not null
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+-----------------------------------------------------------------------------------------------------          
+/* Daily necessity Parameter Report of Child in Ethiopia */
+Begin Try
+Select chd.ethiopia_constructed$.round as Round, 
+ROUND(chd.ethiopia_constructed$.wi_new, 2) as WealthIN, 
+ROUND(chd.ethiopia_constructed$.hq_new, 2) as Housing_Q,
+chd.ethiopia_constructed$.sv_new as ServiceIN,
+ROUND(chd.ethiopia_constructed$.cd_new, 2) as Consumer_durables, 
+chd.ethiopia_constructed$.elecq_new as Electricity, 
+chd.ethiopia_constructed$.toiletq_new as Sanitation, 
+chd.ethiopia_constructed$.cookingq_new as Cooking
+from [Chd].Ethiopia_N
+right join chd.ethiopia_constructed$ 
+on
+[Chd].Ethiopia_N.childid = chd.ethiopia_constructed$.childid
+
+where chd.ethiopia_constructed$.wi_new is not null and 
+chd.ethiopia_constructed$.sv_new = 1
+ORDER BY chd.ethiopia_constructed$.round
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+select * from chd.Ethiopia_N
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create a New Table after adding schema*/
+CREATE TABLE [Chd].[india_constructed$1](
+	[childid] [nvarchar](255) NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[inround] [float] NULL,
+	[panel12345] [float] NULL,
+	[deceased] [float] NULL,
+	[dint] [datetime] NULL,
+	[clustid] [float] NULL,
+	[commid] [nvarchar](255) NULL,
+	[region] [float] NULL,
+	[typesite] [float] NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[agemon] [float] NULL,
+	[marrcohab] [float] NULL,
+	[marrcohab_age] [float] NULL,
+	[birth] [float] NULL,
+	[birth_age] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[fwfl] [float] NULL,
+	[fhfa] [float] NULL,
+	[fwfa] [float] NULL,
+	[fbfa] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[bwght] [float] NULL,
+	[bwdoc] [float] NULL,
+	[numante] [float] NULL,
+	[delivery] [float] NULL,
+	[tetanus] [float] NULL,
+	[bcg] [float] NULL,
+	[measles] [float] NULL,
+	[polio] [float] NULL,
+	[dpt] [float] NULL,
+	[hib] [float] NULL,
+	[chmightdie] [float] NULL,
+	[chillness] [float] NULL,
+	[chinjury] [float] NULL,
+	[chhprob] [float] NULL,
+	[chdisability] [float] NULL,
+	[chdisscale] [float] NULL,
+	[chsmoke] [float] NULL,
+	[chalcohol] [float] NULL,
+	[chrephealth1] [float] NULL,
+	[chrephealth2] [float] NULL,
+	[chrephealth3] [float] NULL,
+	[chrephealth4] [float] NULL,
+	[chhrel] [float] NULL,
+	[chhealth] [float] NULL,
+	[cladder] [float] NULL,
+	[hsleep] [float] NULL,
+	[hcare] [float] NULL,
+	[hchore] [float] NULL,
+	[htask] [float] NULL,
+	[hwork] [float] NULL,
+	[hschool] [float] NULL,
+	[hstudy] [float] NULL,
+	[hplay] [float] NULL,
+	[commwork] [float] NULL,
+	[commsch] [float] NULL,
+	[preprim] [float] NULL,
+	[agegr1] [float] NULL,
+	[enrol] [float] NULL,
+	[engrade] [float] NULL,
+	[entype] [float] NULL,
+	[hghgrade] [float] NULL,
+	[timesch] [float] NULL,
+	[levlread] [float] NULL,
+	[levlwrit] [float] NULL,
+	[literate] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[careladder] [float] NULL,
+	[careldr4yrs] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[dadcantread] [float] NULL,
+	[dadyrdied] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[momcantread] [float] NULL,
+	[momyrdied] [float] NULL,
+	[headid] [float] NULL,
+	[headedu] [float] NULL,
+	[headage] [float] NULL,
+	[headsex] [float] NULL,
+	[headrel] [float] NULL,
+	[hhsize] [float] NULL,
+	[male05] [float] NULL,
+	[male612] [float] NULL,
+	[male1317] [float] NULL,
+	[male1860] [float] NULL,
+	[male61] [float] NULL,
+	[female05] [float] NULL,
+	[female612] [float] NULL,
+	[female1317] [float] NULL,
+	[female1860] [float] NULL,
+	[female61] [float] NULL,
+	[wi] [float] NULL,
+	[hq] [float] NULL,
+	[sv] [float] NULL,
+	[cd] [float] NULL,
+	[drwaterq] [float] NULL,
+	[toiletq] [float] NULL,
+	[elecq] [float] NULL,
+	[cookingq] [float] NULL,
+	[aniany] [float] NULL,
+	[animilk] [float] NULL,
+	[anidrau] [float] NULL,
+	[anirumi] [float] NULL,
+	[anicowm] [float] NULL,
+	[anicowt] [float] NULL,
+	[anicalv] [float] NULL,
+	[anibufm] [float] NULL,
+	[anibuft] [float] NULL,
+	[anibull] [float] NULL,
+	[anihebu] [float] NULL,
+	[anidonk] [float] NULL,
+	[anishee] [float] NULL,
+	[anigoat] [float] NULL,
+	[anipigs] [float] NULL,
+	[anipoul] [float] NULL,
+	[anirabb] [float] NULL,
+	[anispec] [float] NULL,
+	[aniheif] [float] NULL,
+	[aniybul] [float] NULL,
+	[anibeeh] [float] NULL,
+	[anifish] [float] NULL,
+	[anishri] [float] NULL,
+	[anifshr] [float] NULL,
+	[aniothr] [float] NULL,
+	[ownlandhse] [float] NULL,
+	[ownhouse] [float] NULL,
+	[pds] [float] NULL,
+	[nregs] [float] NULL,
+	[nregs_work] [float] NULL,
+	[nregs_allow] [float] NULL,
+	[rajiv] [float] NULL,
+	[sabla] [float] NULL,
+	[sabla_yl] [float] NULL,
+	[ikp] [float] NULL,
+	[ikp_child] [float] NULL,
+	[credit] [float] NULL,
+	[foodsec] [float] NULL,
+	[shcrime1] [float] NULL,
+	[shcrime2] [float] NULL,
+	[shcrime3] [float] NULL,
+	[shcrime4] [float] NULL,
+	[shcrime5] [float] NULL,
+	[shcrime6] [float] NULL,
+	[shcrime7] [float] NULL,
+	[shcrime8] [float] NULL,
+	[shregul1] [float] NULL,
+	[shregul2] [float] NULL,
+	[shregul3] [float] NULL,
+	[shregul4] [float] NULL,
+	[shregul5] [float] NULL,
+	[shecon1] [float] NULL,
+	[shecon2] [float] NULL,
+	[shecon3] [float] NULL,
+	[shecon4] [float] NULL,
+	[shecon5] [float] NULL,
+	[shecon6] [float] NULL,
+	[shecon7] [float] NULL,
+	[shecon8] [float] NULL,
+	[shecon9] [float] NULL,
+	[shecon10] [float] NULL,
+	[shecon11] [float] NULL,
+	[shecon12] [float] NULL,
+	[shecon13] [float] NULL,
+	[shecon14] [float] NULL,
+	[shenv1] [float] NULL,
+	[shenv2] [float] NULL,
+	[shenv3] [float] NULL,
+	[shenv4] [float] NULL,
+	[shenv5] [float] NULL,
+	[shenv6] [float] NULL,
+	[shenv7] [float] NULL,
+	[shenv8] [float] NULL,
+	[shenv9] [float] NULL,
+	[shhouse1] [float] NULL,
+	[shhouse2] [float] NULL,
+	[shhouse3] [float] NULL,
+	[shfam1] [float] NULL,
+	[shfam2] [float] NULL,
+	[shfam3] [float] NULL,
+	[shfam4] [float] NULL,
+	[shfam5] [float] NULL,
+	[shfam6] [float] NULL,
+	[shfam7] [float] NULL,
+	[shfam8] [float] NULL,
+	[shfam9] [float] NULL,
+	[shfam10] [float] NULL,
+	[shfam11] [float] NULL,
+	[shfam12] [float] NULL,
+	[shfam13] [float] NULL,
+	[shfam14] [float] NULL,
+	[shfam18] [float] NULL,
+	[shother] [float] NULL,
+	[ID_PK] [nchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_PK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-----------------------------------------------------------------------------------------------------
+
+/* insert data into the table into schemas Chd*/
+Insert into chd.india_constructed$ Select * from dbo.india_constructed$
+
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+Drop table dbo.india_constructed$
+
+-----------------------------------------------------------------------------------------------------
+
+/* identify the data in the table*/
+Select * from Chd.india_constructed$
+
+-----------------------------------------------------------------------------------------------------
+
+/* Add new Column as Serial No.*/
+alter table chd.india_constructed$ add SrNo int identity(1,1)
+
+-----------------------------------------------------------------------------------------------------
+/* Add new Column as ID_PK*/
+Alter Table chd.india_constructed$ add ID_PK nchar(255)
+
+-----------------------------------------------------------------------------------------------------
+/* Using Concatination for Primary Key */
+update chd.india_constructed$ set ID_PK = Concat(childid,':',SrNo)
+-----------------------------------------------------------------------------------------------------
+/* Add constraint in column ID_PK */
+Alter table chd.india_constructed$ Alter column ID_PK nchar(255) not null;
+-----------------------------------------------------------------------------------------------------
+/* Add Primary key in column ID_PK */
+Alter table chd.india_constructed$ add primary key(ID_PK)
+
+-----------------------------------------------------------------------------------------------------
+
+/* Using Concatination for Primary Key with Replace function */
+Update chd.india_constructed$ Set ID_PK=REPLACE(ID_PK,'IN','YL')
+-----------------------------------------------------------------------------------------------------
+/* Drop Column */
+Alter table chd.india_constructed$ drop column SrNO
+-----------------------------------------------------------------------------------------------------
+/*Delete 2 rows where Childid is equal to childid*/
+delete from chd.india_constructed$ where childid = 'childid'
+
+-----------------------------------------------------------------------------------------------------
+/* Report to analyse the child poverty on the basis of Regions, 
+Weight, Height and BMI in india in different Years*/  
+Declare @StartDate Datetime ='2007-11-23 00:00:000',
+		@EndDate Datetime ='2017-11-23 00:00:000'
+Select 
+	childid as ID,
+	region as Regions, 
+	round(chweight, 2) as Child_Weight,
+	round(chheight, 2) as Child_Height,
+	round(agemon/12, 1) as Age_IN_Year,
+	round(bmi, 2) as BMI from Chd.india_constructed$
+where dint>=@StartDate and dint <=@EndDate
+order by Regions desc
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Gender Ratio*/
+Create View DeceasedChild_3 
+As Select chsex as ChSex,sum(deceased) as Deceased from chd.india_constructed$
+where deceased =1
+group by chsex
+
+/* Create View of above Query*/
+Select * from DeceasedChild_3
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Interview Round By Young Life Community Ratio*/
+Create View DeceasedChild_4 
+As Select round as Round,sum(deceased)as Deceased from chd.india_constructed$
+where deceased =1
+group by Round
+
+/* Create View of above Query*/
+Select * from DeceasedChild_4
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create Procedure for Repeatative Task */ 
+Create PROCEDURE SelectChildRecIND @Round nvarchar(30)
+AS
+Begin Try
+	SELECT childid as ID, yc as Young_Cohort, round As Round, 
+		inround as Inround, dint as Interview_Date, 
+		childid as ChildID, clustid as ClustID,region As Regions, 
+		childloc as Locations, chsex As Gender, chlang as Languages 
+	FROM chd.india_constructed$ WHERE round = @Round and dint is not null
+End Try
+Begin Catch
+	SELECT ERROR_MESSAGE() AS [Error Message]
+         ,ERROR_LINE() AS ErrorLine
+         ,ERROR_NUMBER() AS [Error Number]  
+         ,ERROR_SEVERITY() AS [Error Severity]  
+         ,ERROR_STATE() AS [Error State]
+		 ,ERROR_PROCEDURE() As [Error Procedure]
+End Catch
+Go
+-----------------------------------------------------------------------------------------------------
+/* Execute Procedure for Repeatative Task for Round */ 
+Exec SelectChildRecIND @Round = 1
+Exec SelectChildRecIND @Round = 2
+Exec SelectChildRecIND @Round = 3
+Exec SelectChildRecIND @Round = 4
+Exec SelectChildRecIND @Round = 5
+
+-----------------------------------------------------------------------------------------------------
+/* Work, Play and Study Parameter Report of Child in india */
+Begin Try
+Select yc as Young_Cohort,hwork as Hours_Work, hschool as Hours_School,
+hstudy as Hours_Study,hplay as Hours_Play From chd.india_constructed$ 
+where yc<>0 and hwork<>0 
+Order BY 
+(Case
+	when hwork is null then 'No Record'
+	when hschool is null then 'No Record'
+	when hstudy is null then 'No Record'
+	when hplay is null then 'No Record'
+	else 'Children are not spending time on it'
+End)
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create a New Table after adding schema*/
+
+CREATE TABLE [Chd].[india_N](
+	[S_N0] [float] NULL,
+	[childid] [nvarchar](255) NOT NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[dint] [datetime] NULL,
+	[commid] [nvarchar](255) NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[chhrel] [float] NULL,
+	[preprim] [float] NULL,
+	[agegr1] [float] NULL,
+	[enrol] [float] NULL,
+	[engrade] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[headid] [float] NULL,
+	[headedu] [float] NULL,
+	[headage] [float] NULL,
+	[headsex] [float] NULL,
+	[headrel] [float] NULL,
+	[hhsize] [float] NULL,
+	[male05] [float] NULL,
+	[male612] [float] NULL,
+	[male1317] [float] NULL,
+	[male1860] [float] NULL,
+	[male61] [float] NULL,
+	[female05] [float] NULL,
+	[female612] [float] NULL,
+	[female1317] [float] NULL,
+	[female1860] [float] NULL,
+	[female61] [float] NULL,
+	[wi] [float] NULL,
+	[hq] [float] NULL,
+	[sv] [float] NULL,
+	[cd] [float] NULL,
+	[drwaterq] [float] NULL,
+	[toiletq] [float] NULL,
+	[elecq] [float] NULL,
+	[cookingq] [float] NULL,
+	[aniany] [float] NULL,
+	[animilk] [float] NULL,
+	[anidrau] [float] NULL,
+	[anirumi] [float] NULL,
+	[ownlandhse] [float] NULL,
+	[shcrime3] [float] NULL,
+	[shcrime4] [float] NULL,
+	[shcrime8] [float] NULL,
+	[shecon3] [float] NULL,
+	[shecon5] [float] NULL,
+	[shecon14] [float] NULL,
+	[shenv6] [float] NULL,
+	[shenv9] [float] NULL,
+	[shfam7] [float] NULL,
+	[shfam8] [float] NULL,
+	[shfam9] [float] NULL,
+	[shfam12] [float] NULL,
+	[shfam13] [float] NULL,
+	[shfam14] [float] NULL,
+	[shother] [float] NULL,
+ CONSTRAINT [PK_india_N] PRIMARY KEY CLUSTERED 
+(
+	[childid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, 
+ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-----------------------------------------------------------------------------------------------------
+
+/* insert data into the table into schemas Chd*/
+Insert into [Chd].[India_N] Select * from dbo.india_N
+
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+Drop table dbo.india_N
+
+-----------------------------------------------------------------------------------------------------
+/* Measure less than Zero CHILD: ANTHROPOMETRIC */ 
+BEGIN TRY
+Select childid as ID ,zwfa as Z_Score_Weight,zhfa as Z_Score_Height,
+zbfa as Z_Score_BMI,zwfl as Weight_length_Per_Height 
+from [Chd].[India_N] 
+where zwfa<0 and zhfa<0 and zbfa<0 and zwfl<0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Young Cohort Child Report Who are underweight, short in height and thinness */
+BEGIN TRY
+Select childid as ID ,yc as Young_Cohort, underweight as Underweight, 
+stunting As Short_Height_Age, thinness as Thinness from [Chd].[India_N]
+where underweight is not null and underweight<>0 
+and stunting is not null and stunting<>0 
+and thinness is not null and thinness<>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+-----------------------------------------------------------------------------------------------------
+/* Report Child who consume drugs */
+BEGIN TRY
+Select 
+chd.india_N.childid as ID ,chsmoke as Child_Smoke,
+round(chd.india_constructed$.agemon/12,1) as AGE,
+chalcohol as Child_Alchohol 
+from [Chd].[india_N] 
+right join [Chd].[india_constructed$] 
+on 
+chd.india_N.childid = Chd.india_constructed$.childid 
+where chsmoke is not null and chalcohol is not null and chalcohol <>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+-----------------------------------------------------------------------------------------------------
+/* Health Parameter Report of Child in India */
+BEGIN TRY
+Select Ethnicity= (
+CASE
+		WHEN chethnic = 99 THEN 'NK'
+		WHEN chethnic = 101 THEN 'Other, Muslim'
+		WHEN chethnic = 102 THEN 'Other, Buddhist'
+		WHEN chethnic = 100 THEN 'Other, Hindu'
+		WHEN chethnic = 104 THEN 'Other, Christian'
+		WHEN chethnic = 14 THEN 'None'
+		WHEN chethnic = 21 THEN 'SC'
+		WHEN chethnic = 22 THEN 'ST'
+		WHEN chethnic = 23 THEN 'BC'
+		ELSE 'Other'
+	END) ,chdisability, chrephealth1,chrephealth2,chrephealth3,chrephealth4 
+from chd.india_constructed$
+where chrephealth1 is not null and 
+chrephealth2 is not null and chrephealth3 is not null and 
+chrephealth4 is not null and chdisability = 1
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Report Child Location, Group , Language and religion */
+BEGIN TRY
+Select Gender = (
+case 
+	when chsex = 1 then ('Male')
+	else ('Female')
+end
+),childloc as Child_Location, chlang as Child_Language, 
+chethnic as Child_Ethnic , chldrel as Child_Religion 
+from [Chd].[India_N] 
+where chlang is not null and chethnic is not null
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+-----------------------------------------------------------------------------------------------------
+/* Daily necessity Parameter Report of Child in India*/
+BEGIN TRY
+Select round as Round, 
+		ROUND(wi,2) as WealthIN , 
+		ROUND(hq, 2) as Housing_Q, sv as ServiceIN,
+		ROUND(cd, 2) as Consumer_durables, 
+		elecq as Electricity, toiletq as Sanitation, 
+		cookingq as Cooking
+from [Chd].[India_N]
+where wi is not null and sv = 1
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+
+Select * from Chd.india_N
+
+-----------------------------------------------------------------------------------------------------
+
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create a New Table after adding schema*/
+CREATE TABLE [Chd].[peru_constructed$](
+	[childid] [nvarchar](255) NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[inround] [float] NULL,
+	[panel12345] [float] NULL,
+	[deceased] [float] NULL,
+	[dint] [datetime] NULL,
+	[placeid] [nvarchar](255) NULL,
+	[clustid] [float] NULL,
+	[typesite] [float] NULL,
+	[region] [float] NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[agemon] [float] NULL,
+	[marrcohab] [float] NULL,
+	[marrcohab_age] [float] NULL,
+	[birth] [float] NULL,
+	[birth_age] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[fwfl] [float] NULL,
+	[fhfa] [float] NULL,
+	[fwfa] [float] NULL,
+	[fbfa] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[bwght] [float] NULL,
+	[bwdoc] [float] NULL,
+	[numante] [float] NULL,
+	[delivery] [float] NULL,
+	[tetanus] [float] NULL,
+	[bcg] [float] NULL,
+	[measles] [float] NULL,
+	[polio] [float] NULL,
+	[dpt] [float] NULL,
+	[hib] [float] NULL,
+	[chmightdie] [float] NULL,
+	[chillness] [float] NULL,
+	[chinjury] [float] NULL,
+	[chhprob] [float] NULL,
+	[chdisability] [float] NULL,
+	[chdisscale] [float] NULL,
+	[chsmoke] [float] NULL,
+	[chalcohol] [float] NULL,
+	[chrephealth1] [float] NULL,
+	[chrephealth2] [float] NULL,
+	[chrephealth3] [float] NULL,
+	[chrephealth4] [float] NULL,
+	[chhrel] [float] NULL,
+	[chhealth] [float] NULL,
+	[cladder] [float] NULL,
+	[hsleep] [float] NULL,
+	[hcare] [float] NULL,
+	[hchore] [float] NULL,
+	[htask] [float] NULL,
+	[hwork] [float] NULL,
+	[hschool] [float] NULL,
+	[hstudy] [float] NULL,
+	[hplay] [float] NULL,
+	[commwork] [float] NULL,
+	[commsch] [float] NULL,
+	[preprim] [float] NULL,
+	[agegr1] [float] NULL,
+	[enrol] [float] NULL,
+	[engrade] [float] NULL,
+	[entype] [float] NULL,
+	[timesch] [float] NULL,
+	[levlwrit] [float] NULL,
+	[levlread] [float] NULL,
+	[literate] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[careladder] [float] NULL,
+	[careldr4yrs] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[dadcantread] [float] NULL,
+	[dadyrdied] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[momcantread] [float] NULL,
+	[momyrdied] [float] NULL,
+	[headid] [float] NULL,
+	[headedudu] [float] NULL,
+	[headage] [float] NULL,
+	[headsex] [float] NULL,
+	[headrel] [float] NULL,
+	[hhsize] [float] NULL,
+	[male05] [float] NULL,
+	[male612] [float] NULL,
+	[male1317] [float] NULL,
+	[male1860] [float] NULL,
+	[male61] [float] NULL,
+	[female05] [float] NULL,
+	[female612] [float] NULL,
+	[female1317] [float] NULL,
+	[female1860] [float] NULL,
+	[female61] [float] NULL,
+	[wi] [float] NULL,
+	[hq] [float] NULL,
+	[sv] [float] NULL,
+	[cd] [float] NULL,
+	[drwaterq] [float] NULL,
+	[toiletq] [float] NULL,
+	[elecq] [float] NULL,
+	[cookingq] [float] NULL,
+	[aniany] [float] NULL,
+	[animilk] [float] NULL,
+	[anidrau] [float] NULL,
+	[anirumi] [float] NULL,
+	[anispec] [float] NULL,
+	[anicowm] [float] NULL,
+	[anicowt] [float] NULL,
+	[anioxen] [float] NULL,
+	[anidonk] [float] NULL,
+	[anishee] [float] NULL,
+	[anigoat] [float] NULL,
+	[anipigs] [float] NULL,
+	[anipoul] [float] NULL,
+	[anirabb] [float] NULL,
+	[anillam] [float] NULL,
+	[aniguin] [float] NULL,
+	[anisnai] [float] NULL,
+	[anibeeh] [float] NULL,
+	[anifish] [float] NULL,
+	[anishri] [float] NULL,
+	[anifshr] [float] NULL,
+	[aniothr] [float] NULL,
+	[ownlandhse] [float] NULL,
+	[ownhouse] [float] NULL,
+	[juntos] [float] NULL,
+	[bonograt] [float] NULL,
+	[sisgrat_yl] [float] NULL,
+	[minsa_yl] [float] NULL,
+	[insur_yl] [float] NULL,
+	[beca_yl] [float] NULL,
+	[projoven_yl] [float] NULL,
+	[credit] [float] NULL,
+	[foodsec] [float] NULL,
+	[shcrime1] [float] NULL,
+	[shcrime2] [float] NULL,
+	[shcrime3] [float] NULL,
+	[shcrime4] [float] NULL,
+	[shcrime5] [float] NULL,
+	[shcrime6] [float] NULL,
+	[shcrime8] [float] NULL,
+	[shregul1] [float] NULL,
+	[shregul2] [float] NULL,
+	[shregul4] [float] NULL,
+	[shregul5] [float] NULL,
+	[shregul6] [float] NULL,
+	[shecon1] [float] NULL,
+	[shecon2] [float] NULL,
+	[shecon3] [float] NULL,
+	[shecon4] [float] NULL,
+	[shecon5] [float] NULL,
+	[shecon6] [float] NULL,
+	[shecon7] [float] NULL,
+	[shecon8] [float] NULL,
+	[shecon9] [float] NULL,
+	[shecon10] [float] NULL,
+	[shecon11] [float] NULL,
+	[shecon12] [float] NULL,
+	[shecon14] [float] NULL,
+	[shenv1] [float] NULL,
+	[shenv2] [float] NULL,
+	[shenv3] [float] NULL,
+	[shenv4] [float] NULL,
+	[shenv5] [float] NULL,
+	[shenv6] [float] NULL,
+	[shenv7] [float] NULL,
+	[shenv8] [float] NULL,
+	[shenv9] [float] NULL,
+	[shenv10] [float] NULL,
+	[shenv11] [float] NULL,
+	[shenv12] [float] NULL,
+	[shhouse1] [float] NULL,
+	[shhouse2] [float] NULL,
+	[shhouse3] [float] NULL,
+	[shfam1] [float] NULL,
+	[shfam2] [float] NULL,
+	[shfam3] [float] NULL,
+	[shfam4] [float] NULL,
+	[shfam5] [float] NULL,
+	[shfam6] [float] NULL,
+	[shfam7] [float] NULL,
+	[shfam8] [float] NULL,
+	[shfam9] [float] NULL,
+	[shfam10] [float] NULL,
+	[shfam12] [float] NULL,
+	[shfam13] [float] NULL,
+	[shfam14] [float] NULL,
+	[shfam15] [float] NULL,
+	[shfam16] [float] NULL,
+	[shfam17] [float] NULL,
+	[shfam18] [float] NULL,
+	[shother] [float] NULL,
+	[ID_PK] [nchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_PK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+-----------------------------------------------------------------------------------------------------
+
+/* insert data into the table into schemas Chd*/
+Insert into chd.peru_constructed$ Select * from dbo.peru_constructed$
+
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+Drop table dbo.peru_constructed$
+
+-----------------------------------------------------------------------------------------------------
+
+/* identify the data in the table*/
+Select * from Chd.peru_constructed$
+
+-----------------------------------------------------------------------------------------------------
+
+/* Add new Column as Serial No.*/
+alter table chd.peru_constructed$ add SrNo int identity(1,1)
+
+-----------------------------------------------------------------------------------------------------
+/* Add new Column as ID_PK*/
+Alter Table chd.peru_constructed$ add ID_PK nchar(255)
+
+-----------------------------------------------------------------------------------------------------
+/* Using Concatination for Primary Key */
+update chd.peru_constructed$ set ID_PK = Concat(childid,':',SrNo)
+-----------------------------------------------------------------------------------------------------
+/* Add constraint in column ID_PK */
+Alter table chd.peru_constructed$ Alter column ID_PK nchar(255) not null;
+-----------------------------------------------------------------------------------------------------
+/* Add Primary key in column ID_PK */
+Alter table chd.peru_constructed$ add primary key(ID_PK)
+-----------------------------------------------------------------------------------------------------
+
+/* Using Concatination for Primary Key with Replace function */
+Update chd.peru_constructed$ Set ID_PK=REPLACE(ID_PK,'PE','YL')
+-----------------------------------------------------------------------------------------------------
+/* Drop Column */
+Alter table chd.peru_constructed$ drop column SrNO
+
+-----------------------------------------------------------------------------------------------------
+/* Report to analyse the child poverty on the basis of Regions, 
+Weight, Height and BMI in peru in different Years*/  
+Declare @StartDate Datetime ='2007-11-23 00:00:000',
+		@EndDate Datetime ='2017-11-23 00:00:000'
+Select 
+	childid as ID,
+	region as Regions, 
+	round(chweight, 2) as Child_Weight,
+	round(chheight, 2) as Child_Height,
+	round(agemon/12, 1) as Age_IN_Year,
+	round(bmi, 2) as BMI from Chd.peru_constructed$
+where dint>=@StartDate and dint <=@EndDate
+order by Regions
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Gender Ratio*/
+Create View DeceasedChild_5 
+As Select chsex as ChSex,sum(deceased) as Deceased from chd.peru_constructed$
+where deceased =1
+group by chsex
+
+/* Create View of above Query*/
+Select * from DeceasedChild_5
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Interview Round By Young Life Community Ratio*/
+Create View DeceasedChild_6 
+As Select round as Round,sum(deceased)as Deceased from chd.peru_constructed$
+where deceased =1
+group by Round
+
+/* Create View of above Query*/
+Select * from DeceasedChild_6
+
+-----------------------------------------------------------------------------------------------------
+/* Measure less than Zero CHILD: ANTHROPOMETRIC */
+BEGIN TRY
+Select zwfa as Z_Score_Weight,zhfa as Z_Score_Height,
+zbfa as Z_Score_BMI,zwfl as Weight_length_Per_Height 
+from chd.peru_constructed$ where zwfa<0 and zhfa<0 and zbfa<0 and zwfl<0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------
+/* Young Cohort Child Report Who are underweight, short in height and thinness */
+BEGIN TRY
+Select yc as Young_Cohort, underweight as Underweight, 
+stunting As Short_Height_Age, thinness as Thinness from chd.peru_constructed$
+where underweight is not null and underweight<>0 
+and stunting is not null and stunting<>0 
+and thinness is not null and thinness<>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------
+/* Report Child who consume drugs */
+BEGIN TRY
+Select chsmoke as Child_Smoke, chalcohol as Child_Alchohol 
+from chd.peru_constructed$ 
+where chsmoke is not null and chalcohol is not null and chalcohol <>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create Procedure for Repeatative Task */ 
+Create PROCEDURE Select ChildRecPER Round nvarchar(30)
+AS
+Begin Try
+	SELECT childid as ID, yc as Young_Cohort, round As Round, 
+		inround as Inround, dint as Interview_Date, 
+		childid as ChildID, clustid as ClustID,region As Regions, 
+		childloc as Locations, chsex As Gender, chlang as Languages 
+	FROM chd.peru_constructed$ WHERE round = @Round and dint is not null
+End Try
+Begin Catch
+	SELECT ERROR_MESSAGE() AS [Error Message]
+         ,ERROR_LINE() AS ErrorLine
+         ,ERROR_NUMBER() AS [Error Number]  
+         ,ERROR_SEVERITY() AS [Error Severity]  
+         ,ERROR_STATE() AS [Error State]
+		 ,ERROR_PROCEDURE() As [Error Procedure]
+End Catch
+Go
+-----------------------------------------------------------------------------------------------------
+/* Execute Procedure for Repeatative Task for Round */ 
+Exec SelectChildRecPER @Round = 1
+Exec SelectChildRecPER @Round = 2
+Exec SelectChildRecPER @Round = 3
+Exec SelectChildRecPER @Round = 4
+Exec SelectChildRecPER @Round = 5
+-----------------------------------------------------------------------------------------------------
+/* Health Parameter Report of Child in peru */
+BEGIN TRY
+Select chdisability, chrephealth1,chrephealth2,chrephealth3,chrephealth4 
+from chd.peru_constructed$
+where chrephealth1 is not null and 
+chrephealth2 is not null and chrephealth3 is not null and 
+chrephealth4 is not null and chdisability = 1
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------
+/* Work, Play and Study Parameter Report of Child in peru */
+BEGIN TRY
+Select yc as Young_Cohort,hwork as Hours_Work, hschool as Hours_School,
+hstudy as Hours_Study,hplay as Hours_Play From chd.peru_constructed$ 
+where yc<>0 and hwork<>0 
+Order BY 
+(Case
+	when hwork is null then 'No Record'
+	when hschool is null then 'No Record'
+	when hstudy is null then 'No Record'
+	when hplay is null then 'No Record'
+	else 'Children are not spending time on it'
+End)
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create a New Table after adding schema*/
+CREATE TABLE [Chd].[peru_N](
+	[S_No] [float] NULL,
+	[childid] [nvarchar](255) NOT NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[inround] [float] NULL,
+	[panel12345] [float] NULL,
+	[dint] [datetime] NULL,
+	[placeid] [nvarchar](255) NULL,
+	[clustid] [float] NULL,
+	[typesite] [float] NULL,
+	[region] [float] NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[agemon] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[fwfl] [float] NULL,
+	[fhfa] [float] NULL,
+	[fwfa] [float] NULL,
+	[fbfa] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[bwght] [float] NULL,
+	[bwdoc] [float] NULL,
+	[numante] [float] NULL,
+	[delivery] [float] NULL,
+	[tetanus] [float] NULL,
+	[bcg] [float] NULL,
+	[measles] [float] NULL,
+	[polio] [float] NULL,
+	[chmightdie] [float] NULL,
+	[chhprob] [float] NULL,
+	[chhrel] [float] NULL,
+	[preprim] [float] NULL,
+	[agegr1] [float] NULL,
+	[enrol] [float] NULL,
+	[engrade] [float] NULL,
+	[entype] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[headid] [float] NULL,
+	[headedudu] [float] NULL,
+	[headage] [float] NULL,
+	[headsex] [float] NULL,
+	[headrel] [float] NULL,
+	[hhsize] [float] NULL,
+	[male05] [float] NULL,
+	[male612] [float] NULL,
+	[male1317] [float] NULL,
+	[male1860] [float] NULL,
+	[male61] [float] NULL,
+	[female05] [float] NULL,
+	[female612] [float] NULL,
+	[female1317] [float] NULL,
+	[female1860] [float] NULL,
+	[female61] [float] NULL,
+	[wi] [float] NULL,
+	[hq] [float] NULL,
+	[sv] [float] NULL,
+	[cd] [float] NULL,
+	[drwaterq] [float] NULL,
+	[toiletq] [float] NULL,
+	[elecq] [float] NULL,
+	[cookingq] [float] NULL,
+	[aniany] [float] NULL,
+	[animilk] [float] NULL,
+	[anidrau] [float] NULL,
+	[anirumi] [float] NULL,
+	[anispec] [float] NULL,
+	[ownlandhse] [float] NULL,
+	[shcrime3] [float] NULL,
+	[shcrime4] [float] NULL,
+	[shcrime8] [float] NULL,
+	[shecon3] [float] NULL,
+	[shecon5] [float] NULL,
+	[shecon14] [float] NULL,
+	[shenv6] [float] NULL,
+	[shenv9] [float] NULL,
+	[F101] [float] NULL,
+	[F102] [float] NULL,
+	[F103] [float] NULL,
+	[F104] [float] NULL,
+	[F105] [float] NULL,
+	[F106] [float] NULL,
+	[F107] [float] NULL,
+	[F108] [float] NULL,
+	[F109] [float] NULL,
+	[F110] [float] NULL,
+	[F111] [float] NULL,
+	[F112] [float] NULL,
+	[shfam7] [float] NULL,
+	[shfam8] [float] NULL,
+	[shfam9] [float] NULL,
+	[F116] [float] NULL,
+	[shfam12] [float] NULL,
+	[shfam13] [float] NULL,
+	[shfam14] [float] NULL,
+	[F120] [float] NULL,
+	[F121] [float] NULL,
+	[F122] [float] NULL,
+	[F123] [float] NULL,
+	[shother] [float] NULL,
+ CONSTRAINT [PK_peru_constructed$] PRIMARY KEY CLUSTERED 
+(
+	[childid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-----------------------------------------------------------------------------------------------------
+
+/* insert data into the table into schemas Chd*/
+Insert into [Chd].[peru_N] Select * from dbo.peru_N
+
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+Drop table dbo.peru_N
+-----------------------------------------------------------------------------------------------------
+
+select * from Chd.peru_N
+-----------------------------------------------------------------------------------------------------
+/* Measure less than Zero CHILD: ANTHROPOMETRIC */
+BEGIN TRY
+Select childid as ID, zwfa as Z_Score_Weight,zhfa as Z_Score_Height,
+zbfa as Z_Score_BMI,zwfl as Weight_length_Per_Height 
+from [Chd].[Peru_N] where zwfa<0 and zhfa<0 and zbfa<0 and zwfl<0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Young Cohort Child Report Who are underweight, short in height and thinness */
+BEGIN TRY
+Select childid as ID, yc as Young_Cohort, underweight as Underweight, 
+stunting As Short_Height_Age, thinness as Thinness from [Chd].[Peru_N]
+where underweight is not null and underweight<>0 
+and stunting is not null and stunting<>0 
+and thinness is not null and thinness<>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------
+/* Health Parameter Report of Child in Peru */
+BEGIN TRY
+Select Ethnicity= (
+CASE
+		WHEN chd.peru_constructed$.chethnic = 32.0 THEN 'Mestizo'
+		WHEN chd.peru_constructed$.chethnic = 33.0 THEN 'Native of the Amazon'
+		WHEN chd.peru_constructed$.chethnic = 34.0 THEN 'Negro'
+		WHEN chd.peru_constructed$.chethnic = 35.0 THEN 'Asiatic'
+		ELSE 'White'
+	END)  ,chd.peru_constructed$.chdisability, 
+	chd.peru_constructed$.chrephealth1, chd.peru_constructed$.chrephealth2, 
+	chd.peru_constructed$.chrephealth3, chrephealth4 
+from Chd.peru_constructed$
+RIGHT JOIN Chd.peru_N
+ON Chd.peru_constructed$.childid = Chd.peru_N.childid
+where chrephealth1 is not null and 
+chrephealth2 is not null and chrephealth3 is not null and 
+chrephealth4 is not null and chdisability = 1
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+--------------------------------------------------------------------------------------------------
+
+/* Report based on Health, Disability and Well being- */
+BEGIN TRY
+Select chhrel as Child_Comp_Peer,chhprob as Long_Term_Health_Issue, chmightdie as Serious_Issue_ofDie
+from [Chd].[Peru_N] 
+where chmightdie is not null and chhprob is not null and chhprob <>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------
+/* Report Child Location, Group , Langugage and religion */
+BEGIN TRY
+Select Gender = (
+case 
+	when chsex = 1 then ('Male')
+	else ('Female')
+end
+),childloc as Child_Location, chlang as Child_Language, 
+chethnic as Child_Ethnic , chldrel as Child_Religion 
+from [Chd].[peru_N] 
+where chlang is not null and chethnic is not null
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-----------------------------------------------------------------------------------------------------
+/* Report on teh basis of crime parameters */
+select shcrime3, shcrime4, shcrime8
+from Chd.peru_N
+where shcrime3 <> 0 or shcrime4 <> 0 or shcrime8 <> 0 
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+-------------------------------------------------------------------------------------------------------------------
+/* Report Child who consume drugs */
+BEGIN TRY
+Select Chd.peru_constructed$.childid AS Child_ID,
+	round(Chd.peru_constructed$.agemon/12,1) as AGE,
+	Chd.peru_constructed$.chsmoke As Child_Smoke, 
+	Chd.peru_constructed$.chalcohol as Child_Alchohol 
+	from Chd.peru_constructed$
+	RIGHT JOIN Chd.peru_N
+	ON Chd.peru_constructed$.childid = Chd.peru_N.childid
+		where chsmoke is not null and chalcohol is not null and chalcohol <>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+
+--------------------------------------------------------------------------------------------------------------------------
+/* report on the basis of household heads */
+BEGIN TRY
+select HeadSex = (
+case 
+	when headsex = 1 then ('Male')
+	else ('female')
+end
+),
+headid as ID, headage as Head_Age, male61 as Male, female61 as Female
+from chd.peru_N
+where male61 <> 0 and female61 <> 0
+order by headid asc
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+---------------------------------------------------------------------------------
+/* Daily necessity Parameter Report of Child in Peru*/
+BEGIN TRY
+Select round as Round, 
+		ROUND(wi,2) as WealthIN , 
+		ROUND(hq, 2) as Housing_Q, sv as ServiceIN,
+		ROUND(cd, 2) as Consumer_durables, 
+		elecq as Electricity, toiletq as Sanitation, 
+		cookingq as Cooking
+from [Chd].[peru_N]
+where wi is not null and sv = 1
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+---------------------------------------------------------------------------------
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create a New Table after adding schema*/
+CREATE TABLE [Chd].[vietnam_constructed$](
+	[childid] [nvarchar](255) NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[inround] [float] NULL,
+	[panel12345] [float] NULL,
+	[deceased] [float] NULL,
+	[dint] [datetime] NULL,
+	[commid] [nvarchar](255) NULL,
+	[clustid] [float] NULL,
+	[typesite] [float] NULL,
+	[region] [float] NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[agemon] [float] NULL,
+	[marrcohab] [float] NULL,
+	[marrcohab_age] [float] NULL,
+	[birth] [float] NULL,
+	[birth_age] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[fwfl] [float] NULL,
+	[fhfa] [float] NULL,
+	[fwfa] [float] NULL,
+	[fbfa] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[bwght] [float] NULL,
+	[bwdoc] [float] NULL,
+	[numante] [float] NULL,
+	[delivery] [float] NULL,
+	[tetanus] [float] NULL,
+	[bcg] [float] NULL,
+	[measles] [float] NULL,
+	[dpt] [float] NULL,
+	[polio] [float] NULL,
+	[hib] [float] NULL,
+	[chmightdie] [float] NULL,
+	[chillness] [float] NULL,
+	[chinjury] [float] NULL,
+	[chhprob] [float] NULL,
+	[chdisability] [float] NULL,
+	[chdisscale] [float] NULL,
+	[chsmoke] [float] NULL,
+	[chalcohol] [float] NULL,
+	[chrephealth1] [float] NULL,
+	[chrephealth2] [float] NULL,
+	[chrephealth3] [float] NULL,
+	[chrephealth4] [float] NULL,
+	[chhrel] [float] NULL,
+	[chhealth] [float] NULL,
+	[cladder] [float] NULL,
+	[hsleep] [float] NULL,
+	[hcare] [float] NULL,
+	[hchore] [float] NULL,
+	[htask] [float] NULL,
+	[hwork] [float] NULL,
+	[hschool] [float] NULL,
+	[hstudy] [float] NULL,
+	[hplay] [float] NULL,
+	[commwork] [float] NULL,
+	[commsch] [float] NULL,
+	[preprim] [float] NULL,
+	[agegr1] [float] NULL,
+	[enrol] [float] NULL,
+	[engrade] [float] NULL,
+	[entype] [float] NULL,
+	[hghgrade] [float] NULL,
+	[timesch] [float] NULL,
+	[levlread] [float] NULL,
+	[levlwrit] [float] NULL,
+	[literate] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[careladder] [float] NULL,
+	[careldr4yrs] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[dadcantread] [float] NULL,
+	[dadyrdied] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[momcantread] [float] NULL,
+	[momyrdied] [float] NULL,
+	[headid] [float] NULL,
+	[headedu] [float] NULL,
+	[headage] [float] NULL,
+	[headsex] [float] NULL,
+	[headrel] [float] NULL,
+	[hhsize] [float] NULL,
+	[male05] [float] NULL,
+	[male612] [float] NULL,
+	[male1317] [float] NULL,
+	[male1860] [float] NULL,
+	[male61] [float] NULL,
+	[female05] [float] NULL,
+	[female612] [float] NULL,
+	[female1317] [float] NULL,
+	[female1860] [float] NULL,
+	[female61] [float] NULL,
+	[wi_new] [float] NULL,
+	[hq_new] [float] NULL,
+	[sv_new] [float] NULL,
+	[cd_new] [float] NULL,
+	[drwaterq_new] [float] NULL,
+	[toiletq_new] [float] NULL,
+	[elecq_new] [float] NULL,
+	[cookingq_new] [float] NULL,
+	[aniany] [float] NULL,
+	[animilk] [float] NULL,
+	[anidrau] [float] NULL,
+	[anirumi] [float] NULL,
+	[anicowm] [float] NULL,
+	[anicowt] [float] NULL,
+	[anicalv] [float] NULL,
+	[anibufm] [float] NULL,
+	[anibuft] [float] NULL,
+	[anibull] [float] NULL,
+	[anihebu] [float] NULL,
+	[anidonk] [float] NULL,
+	[anishee] [float] NULL,
+	[anigoat] [float] NULL,
+	[anipigs] [float] NULL,
+	[anipoul] [float] NULL,
+	[anirabb] [float] NULL,
+	[anispec] [float] NULL,
+	[aniothr] [float] NULL,
+	[ownlandhse] [float] NULL,
+	[ownhouse] [float] NULL,
+	[molisa06] [float] NULL,
+	[molisa09] [float] NULL,
+	[molisa10] [float] NULL,
+	[molisa11] [float] NULL,
+	[molisa12] [float] NULL,
+	[molisa13] [float] NULL,
+	[molisa14] [float] NULL,
+	[molisa15] [float] NULL,
+	[molisa16] [float] NULL,
+	[credit] [float] NULL,
+	[foodsec] [float] NULL,
+	[shcrime1] [float] NULL,
+	[shcrime2] [float] NULL,
+	[shcrime3] [float] NULL,
+	[shcrime4] [float] NULL,
+	[shcrime5] [float] NULL,
+	[shcrime6] [float] NULL,
+	[shcrime7] [float] NULL,
+	[shcrime8] [float] NULL,
+	[shregul1] [float] NULL,
+	[shregul2] [float] NULL,
+	[shregul3] [float] NULL,
+	[shregul4] [float] NULL,
+	[shregul5] [float] NULL,
+	[shecon1] [float] NULL,
+	[shecon2] [float] NULL,
+	[shecon3] [float] NULL,
+	[shecon4] [float] NULL,
+	[shecon5] [float] NULL,
+	[shecon6] [float] NULL,
+	[shecon7] [float] NULL,
+	[shecon8] [float] NULL,
+	[shecon9] [float] NULL,
+	[shecon10] [float] NULL,
+	[shecon11] [float] NULL,
+	[shecon12] [float] NULL,
+	[shecon13] [float] NULL,
+	[shecon14] [float] NULL,
+	[shenv1] [float] NULL,
+	[shenv2] [float] NULL,
+	[shenv3] [float] NULL,
+	[shenv4] [float] NULL,
+	[shenv5] [float] NULL,
+	[shenv6] [float] NULL,
+	[shenv7] [float] NULL,
+	[shenv8] [float] NULL,
+	[shenv9] [float] NULL,
+	[shhouse1] [float] NULL,
+	[shhouse2] [float] NULL,
+	[shhouse3] [float] NULL,
+	[shfam1] [float] NULL,
+	[shfam2] [float] NULL,
+	[shfam3] [float] NULL,
+	[shfam4] [float] NULL,
+	[shfam5] [float] NULL,
+	[shfam6] [float] NULL,
+	[shfam7] [float] NULL,
+	[shfam8] [float] NULL,
+	[shfam9] [float] NULL,
+	[shfam10] [float] NULL,
+	[shfam11] [float] NULL,
+	[shfam12] [float] NULL,
+	[shfam13] [float] NULL,
+	[shfam14] [float] NULL,
+	[shfam18] [float] NULL,
+	[shother] [float] NULL,
+	[shenv13] [float] NULL,
+	[SrNo] [int] IDENTITY(1,1) NOT NULL,
+	[ID_PK] [nchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_PK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-----------------------------------------------------------------------------------------------------
+/* insert data into the table into schemas Chd*/
+insert into Chd.vietnam_N select * from dbo.vietnam_constructed$
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+drop table dbo.vietnam_constructed$
+
+-----------------------------------------------------------------------------------------------------
+Select * from chd.vietnam_constructed$
+-----------------------------------------------------------------------------------------------------
+/* Add new Column as Serial No.*/
+alter table chd.vietnam_constructed$ add SrNo int identity(1,1)
+
+-----------------------------------------------------------------------------------------------------
+/* Add new Column as ID_PK*/
+Alter Table chd.vietnam_constructed$ add ID_PK nchar(255)
+
+-----------------------------------------------------------------------------------------------------
+/* Using Concatination for Primary Key */
+update chd.vietnam_constructed$ set ID_PK = Concat(childid,':',SrNo)
+-----------------------------------------------------------------------------------------------------
+/* Add constraint in column ID_PK */
+Alter table chd.vietnam_constructed$ Alter column ID_PK nchar(255) not null;
+-----------------------------------------------------------------------------------------------------
+/* Add Primary key in column ID_PK */
+Alter table chd.vietnam_constructed$ add primary key(ID_PK)
+
+-----------------------------------------------------------------------------------------------------
+
+/* Using Concatination for Primary Key with Replace function */
+Update chd.vietnam_constructed$ Set ID_PK=REPLACE(ID_PK,'VN','YL')
+
+
+-----------------------------------------------------------------------------------------------------
+/* Report to analyse the child poverty on the basis of Regions, 
+Weight, Height and BMI in Ethiopia in different Years*/  
+Declare @StartDate Datetime ='2002-11-23 00:00:000',
+		@EndDate Datetime ='2017-11-23 00:00:000'
+Select 
+	childid as ID,
+	region as Regions, 
+	round(chweight, 2) as Child_Weight,
+	round(chheight, 2) as Child_Height,
+	round(agemon/12, 1) as Age_IN_Year, 
+	round(bmi, 2) as BMI from Chd.vietnam_constructed$
+where dint>=@StartDate and dint <=@EndDate 
+order by Regions
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Gender Ratio*/
+Create View DeceasedChild_7 
+As Select chsex as ChSex,sum(deceased) as Deceased from chd.vietnam_constructed$
+where deceased =1
+group by chsex
+
+/* Create View of above Query*/
+Select * from DeceasedChild_7
+
+-----------------------------------------------------------------------------------------------------
+/*Total Number of children Died As Per Interview Round By Young Life Community Ratio*/
+Create View DeceasedChild_8 
+As Select round as Round,sum(deceased)as Deceased from chd.vietnam_constructed$
+where deceased =1
+group by Round
+
+/* Create View of above Query*/
+Select * from DeceasedChild_8
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create Procedure for Repeatative Task */ 
+Create PROCEDURE SelectChildRecN @Round nvarchar(30)
+AS
+Begin Try
+	SELECT childid as ID, yc as Young_Cohort, round As Round, 
+		inround as Inround, dint as Interview_Date, 
+		childid as ChildID, clustid as ClustID,region As Regions, 
+		childloc as Locations, chsex As Gender, chlang as Languages 
+	FROM chd.vietnam_constructed$ WHERE round = @Round and dint is not null
+End Try
+Begin Catch
+	SELECT ERROR_MESSAGE() AS [Error Message]
+         ,ERROR_LINE() AS ErrorLine
+         ,ERROR_NUMBER() AS [Error Number]  
+         ,ERROR_SEVERITY() AS [Error Severity]  
+         ,ERROR_STATE() AS [Error State]
+		 ,ERROR_PROCEDURE() As [Error Procedure]
+End Catch
+Go
+-----------------------------------------------------------------------------------------------------
+/* Execute Procedure for Repeatative Task for Round */ 
+Exec SelectChildRecN @Round = 1
+Exec SelectChildRecN @Round = 2
+Exec SelectChildRecN @Round = 3
+Exec SelectChildRecN @Round = 4
+Exec SelectChildRecN @Round = 5
+
+-----------------------------------------------------------------------------------------------------
+
+/* Work, Play and Study Parameter Report of Child in Ethiopia */
+BEGIN TRY
+Select yc as Young_Cohort,hwork as Hours_Work, hschool as Hours_School,
+hstudy as Hours_Study,hplay as Hours_Play From chd.vietnam_constructed$ 
+where yc<>0 and hwork<>0 
+Order BY 
+(Case
+	when hwork is null then 'No Record'
+	when hschool is null then 'No Record'
+	when hstudy is null then 'No Record'
+	when hplay is null then 'No Record'
+	else 'Children are not spending time on it'
+End)
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-------------------------------------------------------------------------------------------------------
+
+/* Use command is used for specific database*/
+Use Child_Poverty_T1
+
+-----------------------------------------------------------------------------------------------------
+
+/* Create a New Table after adding schema*/
+
+CREATE TABLE [Chd].[vietnam_N](
+	[S_No] [float] NULL,
+	[childid] [nvarchar](255) NOT NULL,
+	[yc] [float] NULL,
+	[round] [float] NULL,
+	[inround] [float] NULL,
+	[panel12345] [float] NULL,
+	[dint] [datetime] NULL,
+	[commid] [nvarchar](255) NULL,
+	[clustid] [float] NULL,
+	[typesite] [float] NULL,
+	[region] [float] NULL,
+	[childloc] [float] NULL,
+	[chsex] [float] NULL,
+	[chlang] [float] NULL,
+	[chethnic] [float] NULL,
+	[chldrel] [float] NULL,
+	[agemon] [float] NULL,
+	[chweight] [float] NULL,
+	[chheight] [float] NULL,
+	[bmi] [float] NULL,
+	[zwfa] [float] NULL,
+	[zhfa] [float] NULL,
+	[zbfa] [float] NULL,
+	[zwfl] [float] NULL,
+	[fwfl] [float] NULL,
+	[fhfa] [float] NULL,
+	[fwfa] [float] NULL,
+	[fbfa] [float] NULL,
+	[underweight] [float] NULL,
+	[stunting] [float] NULL,
+	[thinness] [float] NULL,
+	[bwght] [float] NULL,
+	[bwdoc] [float] NULL,
+	[numante] [float] NULL,
+	[delivery] [float] NULL,
+	[tetanus] [float] NULL,
+	[bcg] [float] NULL,
+	[measles] [float] NULL,
+	[chmightdie] [float] NULL,
+	[chhprob] [float] NULL,
+	[chhrel] [float] NULL,
+	[careid] [float] NULL,
+	[caredu] [float] NULL,
+	[carehead] [float] NULL,
+	[careage] [float] NULL,
+	[caresex] [float] NULL,
+	[carerel] [float] NULL,
+	[carecantread] [float] NULL,
+	[dadid] [float] NULL,
+	[dadedu] [float] NULL,
+	[dadlive] [float] NULL,
+	[dadage] [float] NULL,
+	[momid] [float] NULL,
+	[momedu] [float] NULL,
+	[momlive] [float] NULL,
+	[momage] [float] NULL,
+	[headid] [float] NULL,
+	[headedu] [float] NULL,
+	[headage] [float] NULL,
+	[headsex] [float] NULL,
+	[headrel] [float] NULL,
+	[hhsize] [float] NULL,
+	[male05] [float] NULL,
+	[male612] [float] NULL,
+	[male1317] [float] NULL,
+	[male1860] [float] NULL,
+	[male61] [float] NULL,
+	[female05] [float] NULL,
+	[female612] [float] NULL,
+	[female1317] [float] NULL,
+	[female1860] [float] NULL,
+	[female61] [float] NULL,
+	[wi_new] [float] NULL,
+	[hq_new] [float] NULL,
+	[sv_new] [float] NULL,
+	[cd_new] [float] NULL,
+	[drwaterq_new] [float] NULL,
+	[toiletq_new] [float] NULL,
+	[elecq_new] [float] NULL,
+	[cookingq_new] [float] NULL,
+	[aniany] [float] NULL,
+	[animilk] [float] NULL,
+	[anidrau] [float] NULL,
+	[anirumi] [float] NULL,
+	[ownlandhse] [float] NULL,
+	[shcrime3] [float] NULL,
+	[shcrime4] [float] NULL,
+	[shcrime8] [float] NULL,
+	[shecon3] [float] NULL,
+	[shecon5] [float] NULL,
+	[shecon14] [float] NULL,
+	[shenv6] [float] NULL,
+	[shenv9] [float] NULL,
+	[shfam7] [float] NULL,
+	[shfam8] [float] NULL,
+	[shfam9] [float] NULL,
+	[shfam12] [float] NULL,
+	[shfam13] [float] NULL,
+	[shfam14] [float] NULL,
+	[shother] [float] NULL,
+ CONSTRAINT [PK_vietnam_N] PRIMARY KEY CLUSTERED 
+(
+	[childid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+-----------------------------------------------------------------------------------------------------
+
+/* insert data into the table into schemas Chd*/
+Insert into [Chd].vietnam_N Select * from dbo.vietnam_N
+
+-----------------------------------------------------------------------------------------------------
+/*Drop table after moving data into schema*/
+Drop table dbo.vietnam_N
+
+-----------------------------------------------------------------------------------------------------
+
+/* Measure less than Zero CHILD: ANTHROPOMETRIC */
+BEGIN TRY
+Select childid as ID, round(zwfa, 2) as Z_Score_Weight, round(zhfa , 2) as Z_Score_Height,
+round(zbfa , 2) as Z_Score_BMI, round(zwfl , 2) as Weight_length_Per_Height 
+from [Chd].[vietnam_N] where zwfa<0 and zhfa<0 and zbfa<0 and zwfl<0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Report based on Health, Disability and Well being- */
+Select chhrel as Child_Comp_Peer,chhprob as Long_Term_Health_Issue, chmightdie as Serious_Issue_of_Die
+from [Chd].[vietnam_N] 
+where chmightdie is not null and chhprob is not null and chhprob <>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+/* Report Child who consume drugs */
+BEGIN TRY
+Select Chd.vietnam_N.childid, round(Chd.vietnam_constructed$.agemon/12,1) as AGE,
+	Chd.vietnam_constructed$.chsmoke As Child_Smoke, 
+	Chd.vietnam_constructed$.chalcohol as Child_Alchohol 
+	from Chd.vietnam_constructed$
+	LEFT JOIN Chd.vietnam_N
+	ON Chd.vietnam_N.childid = Chd.vietnam_constructed$.childid
+		where chsmoke is not null and chalcohol is not null and chalcohol <>0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+-----------------------------------------------------------------------------------------------------
+
+/* Health Parameter Report of Child in vietnam */
+BEGIN TRY
+Select Ethnicity= (
+CASE
+		WHEN chd.vietnam_constructed$.chethnic = 99.0 THEN 'NK'
+		WHEN chd.vietnam_constructed$.chethnic = 41.0 THEN 'Kinh'
+		WHEN chd.vietnam_constructed$.chethnic = 43.0 THEN 'Cham'
+		WHEN chd.vietnam_constructed$.chethnic = 44.0 THEN 'Ede'
+		WHEN chd.vietnam_constructed$.chethnic = 45.0 THEN 'Bana'
+		WHEN chd.vietnam_constructed$.chethnic = 46.0 THEN 'Nung'
+		WHEN chd.vietnam_constructed$.chethnic = 47.0 THEN 'Tay'
+		WHEN chd.vietnam_constructed$.chethnic = 48.0 THEN 'Dao'
+		WHEN chd.vietnam_constructed$.chethnic = 42.0 THEN 'Hmong'
+		ELSE 'Other'
+	END) , 
+	round(avg(chd.vietnam_constructed$.chrephealth1),2) as Healht1,
+	round(avg(chd.vietnam_constructed$.chrephealth2),2)as Healht2, 
+	round(avg(chd.vietnam_constructed$.chrephealth3),2)as Healht3, 
+	round(avg(chd.vietnam_constructed$.chrephealth4),2) as Healht4 
+from chd.vietnam_constructed$
+RIGHT JOIN Chd.vietnam_N
+ON chd.vietnam_constructed$.childid = chd.vietnam_constructed$.childid
+where chrephealth1 is not null and 
+chrephealth2 is not null and chrephealth3 is not null and 
+chrephealth4 is not null
+group by chd.vietnam_constructed$.chethnic
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+------------------------------------------------------------------------------------------------------
+/* Report Child Location, Group , Language and religion */
+BEGIN TRY
+Select Gender = (
+case 
+	when chsex = 1 then ('Male')
+	else ('Female')
+end
+),childloc as Child_Location, chlang as Child_Language, 
+chethnic as Child_Ethnic , chldrel as Child_Religion 
+from [Chd].[vietnam_N] 
+where chlang is not null and chethnic is not null
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+--------------------------------------------------------------------------------------------------------
+/* Report to measure the Crime ratio  */
+BEGIN TRY
+select chethnic as Ethnicity, sum(shcrime3) as Shcrime3, sum(shcrime4) as Shcrime4, sum(shcrime8) as Shcrime8
+from Chd.vietnam_N
+where shcrime3 <> 0 or shcrime4 <> 0 or shcrime8 <> 0
+group  by chethnic
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+------------------------------------------------------------------------------------------------------------
+/* Young Cohort Child Report Who are underweight, short in height and thinness */
+BEGIN TRY
+Select chd.vietnam_constructed$.childid as Child_ID,
+		chd.vietnam_constructed$.underweight as UnderWeight, 
+		chd.vietnam_constructed$.stunting as Short_Height_Age,
+		chd.vietnam_constructed$.thinness as Thinness  
+	from Chd.vietnam_constructed$
+	RIGHT JOIN Chd.vietnam_N
+	ON chd.vietnam_constructed$.childid = Chd.vietnam_N.childid
+	where chd.vietnam_constructed$.underweight is not null and
+	chd.vietnam_constructed$.stunting is not null and
+	chd.vietnam_constructed$.thinness is not null and 
+	chd.vietnam_constructed$.underweight <> 0 and 
+	chd.vietnam_constructed$.stunting <> 0and
+	chd.vietnam_constructed$.thinness <> 0
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+----------------------------------------------------------------------------------------------------------------------
+/* report on the basis of household heads */
+BEGIN TRY
+select HeadSex = (
+case 
+	when headsex = 1 then ('Male')
+	else ('female')
+end
+),
+headid as ID, headage as Head_Age, male61 as Male, female61 as Female
+from chd.vietnam_N
+where male61 <> 0 and female61 <> 0
+order by headid asc
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+---------------------------------------------------------------------------------------------------------
+/* Daily necessity Parameter Report of Child in vietnam*/
+BEGIN TRY
+Select round as Round, 
+		ROUND(wi_new,2) as WealthIN , 
+		ROUND(hq_new, 2) as Housing_Q, sv_new as ServiceIN,
+		ROUND(cd_new, 2) as Consumer_durables, 
+		elecq_new as Electricity, toiletq_new as Sanitation, 
+		cookingq_new as Cooking
+from [Chd].[vietnam_N]
+where wi_new is not null and sv_new= 1
+END TRY
+BEGIN CATCH
+PRINT'RESULT NOT FOUND'
+END CATCH
+
+----------------------------------------------------------------------------------------------------------------
+
